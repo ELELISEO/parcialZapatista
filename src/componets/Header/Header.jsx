@@ -1,12 +1,20 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
+import { nombre } from '../../data/nomre';
 
-const Header = () => {
+
+const Header = ({logOut, inputValue}) => {
+
+    const navigate = useNavigate();
+  const handle = () => {
+    navigate("/");
+  }
     return (
         <header className='absolute w-full h-[4rem] flex justify-between items-center'>
             <div className='zain-regular ml-10'>
-                BIenvenido,fulano
+                Bienvenido, {nombre.name}
             </div>
-            <button className='zain-regular mr-6 text-color1 flex w-[10rem] items-center'>
+            <button onClick={handle}className='zain-regular mr-6 text-color1 flex w-[10rem] items-center'>
                 Cerrar Sesion
                 <img src="./image3.png" alt="" className='pl-1 h-auto w-auto' />
             </button>

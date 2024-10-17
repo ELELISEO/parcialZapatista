@@ -1,11 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from "react-router-dom";
+import { nombre } from '../data/nomre';
 
-const Index = () => {
-  const navigate = useNavigate();
-  const handle = () => {
-    navigate("/Busqueda");
+const Index = () => 
+  {
+  const [Username, setUsername] = useState("")
+  const [Password, setPassword] = useState("")
+  const [name, setName] = useState("")
+  const navigate = useNavigate()
+  
+  
+  const handleLogin = () => {
+        
+    if(Username === "" && Password === "")
+    {
+      alert("Complete los datos porfavor")
+    }
+    else if (Username === "") {
+      alert("Porfavor ingrese un nombre");
+    } else if (Password === "") {
+      alert("Porfavor, ingrese una contrseña");
+    } else {
+      nombre.name=Username
+      navigate("/Busqueda");
+    }
   }
+
   return (
     <>
       <header className='w-full h-28 absolute flex justify-center items-center playwrite-us-trad-italic text-[2rem]'>Encuentra tu memoria ideal</header>
@@ -16,13 +36,21 @@ const Index = () => {
               Iniciar Sesion
               <label className='flex flex-col w-[20rem]'>
                 <h2 className='pl-4'>Usuario</h2>
-                <input type="text" placeholder='Username' className='h-[3rem] w-[21rem] border-[1.5px] border-gray-800 rounded-full pl-4' />
+                <input required onChange={(e) => {
+                    setUsername(e.target.value);}}
+                    // Guardar valor del input para el
+                type="text" placeholder='Username' className='h-[3rem] w-[21rem] border-[1.5px] border-gray-800 rounded-full pl-4' />
               </label>
               <label className='flex flex-col w-[20rem]'>
                 <h2 className='pl-4'>Contraseña</h2>
-                <input type='contraseña' placeholder='Password' className='h-[3rem] w-[21rem] border-[1.5px] border-gray-800 rounded-full pl-4' />
+                <input required 
+                onChange={(e) => {
+                  setPassword(e.target.value);
+                 // Guardar valor del input para el Header
+                }} 
+                type='contraseña' placeholder='Password' className='h-[3rem] w-[21rem] border-[1.5px] border-gray-800 rounded-full pl-4' />
               </label>
-              <button onClick={handle} className='bg-color1 rounded-3xl w-56 h-12 text-white'>Ingresar</button>
+              <button onClick={handleLogin} className='bg-color1 rounded-3xl w-56 h-12 text-white'>Ingresar</button>
             </div>
           </div>
           <div className='h-[28rem] w-[28rem] rounded-full bg-color2'>
