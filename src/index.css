@@ -1,3 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Trad:wght@100;200;300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Trad&family=Zain:wght@200;300;400;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+US+Trad&family=Sedan:ital@0;1&family=Zain:wght@200;300;400;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-bg-size {
+    background-size: 100%; /* Ajusta este valor como necesites */
+  }
+  
+  .playwrite-us-trad {
+    font-family: "Playwrite US Trad", cursive; /* Asegúrate de que la fuente esté disponible */
+    font-optical-sizing: auto;
+    font-weight: 400; /* Usa solo el número sin px */
+}
+
+/* Si necesitas la variante en cursiva, puedes crear una clase separada */
+.playwrite-us-trad-italic {
+    font-family: "Playwrite US Trad", cursive;
+    font-weight: 400; /* O el peso que desees */
+    font-style: italic; /* Aplica cursiva aquí */
+}
+
+.zain-extralight {
+    font-family: "Zain", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .zain-light {
+    font-family: "Zain", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .zain-regular {
+    font-family: "Zain", sans-serif;
+    font-weight: 400;
+    font-size: 25px;
+    font-style: normal;
+  }
+  
+  .zain-bold {
+    font-family: "Zain", sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    font-style: normal;
+  }
+  
+  .zain-extrabold {
+    font-family: "Zain", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .zain-black {
+    font-family: "Zain", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .sedan-regular {
+    font-family: "Sedan", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .sedan-regular-italic {
+    font-family: "Sedan", serif;
+    font-weight: 400;
+    font-size: 40px;
+    font-style: italic;
+  }
+  
