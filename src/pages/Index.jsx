@@ -1,6 +1,11 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 
 const Index = () => {
+  const navigate = useNavigate();
+  const handle = () => {
+    navigate("/Busqueda");
+  }
   return (
     <>
       <header className='w-full h-28 absolute flex justify-center items-center playwrite-us-trad-italic text-[2rem]'>Encuentra tu memoria ideal</header>
@@ -14,14 +19,14 @@ const Index = () => {
                 <input type="text" placeholder='Username' className='h-[3rem] w-[21rem] border-[1.5px] border-gray-800 rounded-full pl-4' />
               </label>
               <label className='flex flex-col w-[20rem]'>
-              <h2 className='pl-4'>Contraseña</h2>
+                <h2 className='pl-4'>Contraseña</h2>
                 <input type='contraseña' placeholder='Password' className='h-[3rem] w-[21rem] border-[1.5px] border-gray-800 rounded-full pl-4' />
               </label>
-              <button className='bg-color1 rounded-3xl w-56 h-12 text-white'>Ingresar</button>
+              <button onClick={handle} className='bg-color1 rounded-3xl w-56 h-12 text-white'>Ingresar</button>
             </div>
           </div>
           <div className='h-[28rem] w-[28rem] rounded-full bg-color2'>
-            <img src='./amor1.png' alt='' className='w-full h-full'/>
+            <img src='./amor1.png' alt='' className='w-full h-full' />
 
           </div>
         </section>

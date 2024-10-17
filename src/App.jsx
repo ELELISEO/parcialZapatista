@@ -7,9 +7,9 @@ function App() {
     return (
         <Router>
             <Routes>
-                <Route path="/index" element={ <Index /> } />
+                <Route path="/" element={ <Index /> } />
                 <Route path="/Match" element={ <Match /> } />
-                <Route path="/Bus" element={ <Busqueda /> } />
+                <Route path="/Busqueda" element={ <Busqueda /> } />
             </Routes>
         </Router>
     );
