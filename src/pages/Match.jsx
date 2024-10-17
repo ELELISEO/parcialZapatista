@@ -20,7 +20,9 @@ const Match = () => {
                 <div className='w-full h-12 bg-teal-100'>
 
                 </div>
-                <div className='w-full h-36 bg-slate-600'>
+                <div className='w-full h-36 bg-slate-600 flex justify-around items-center'>
+                    <button className='bg-color1 h-12 w-12'></button>
+                    <button className='bg-color1 h-12 w-12'></button>
 
                 </div>
 
