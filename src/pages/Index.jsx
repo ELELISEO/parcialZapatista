@@ -10,8 +10,8 @@ const Index = () => {
             <div className='flex flex-col w-full h-[20rem] justify-around items-center zain-regular'>
               Iniciar Sesion
               <label className='flex flex-col w-[20rem]'>
-                <h2 className='pl-4'>Correo</h2>
-                <input type="email" placeholder='correo@gmail.com' className='h-[3rem] w-[21rem] border-[1.5px] border-gray-800 rounded-full pl-4' />
+                <h2 className='pl-4'>Usuario</h2>
+                <input type="text" placeholder='Username' className='h-[3rem] w-[21rem] border-[1.5px] border-gray-800 rounded-full pl-4' />
               </label>
               <label className='flex flex-col w-[20rem]'>
               <h2 className='pl-4'>Contraseña</h2>
