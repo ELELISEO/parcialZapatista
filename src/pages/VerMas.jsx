@@ -4,8 +4,8 @@ const VerMas = ({ setFlagTarjeta }) => {
   return (
     <div className="bg-white h-[32rem] w-[69rem] rounded-lg shadow-2xl flex items-center justify-start flex-col">
       <div className="w-full h-2/4 flex items-end flex-col relative">
-        <button className="absolute left-1" onClick={setFlagTarjeta}>
-          flecha
+        <button className="absolute left-1 top-3" onClick={setFlagTarjeta}>
+          <img src="./ArrowReverse.png" alt="" />
         </button>
         <div className="w-full h-[9.5rem] rounded-l">
           <img
